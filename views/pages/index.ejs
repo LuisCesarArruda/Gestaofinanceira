@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="h-100" lang="pt-BR">
+  <head>
+    <%- include('../partials/head') %>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <%- include('../partials/header') %>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+      <div class="container">
+  
+        <h1 class="mt-5 text-center">Gestão Financeira</h1>
+        <p class="lead text-center mb-5">
+          Pagina Web na qual permite gerenciar seu acervo pessoal de Dispesas e receitas! Você pode cadastrar novas receitas ou despesas!
+        </p>
+  
+        <div class="row align-items-center">
+          <div class="col">
+            <div class="card text-center" style="width: 18rem;">
+              <img src="../static/img/grafico.png" class="card-img-top mt-3 w-50 rounded mx-auto d-block">
+              <div class="card-body">
+                <h5 class="card-title">Adicionar</h5>
+                <p class="card-text">
+                  Cadastro de receitas e despesas.
+                </p>
+                <a href="/user/new" class="btn btn-primary">Adicionar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center" style="width: 18rem;">
+              <img src="../static/img/receita.png" class="card-img-top mt-3 w-50 rounded mx-auto d-block">
+              <div class="card-body">
+                <h5 class="card-title">Receita</h5>
+                <p class="card-text">
+                  Vizualização das receitas cadastradas.
+                </p>
+                <a href="/user" class="btn btn-primary">Vizualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center" style="width: 18rem;">
+              <img src="../static/img/despesa.png" class="card-img-top mt-3 w-50 rounded mx-auto d-block">
+              <div class="card-body">
+                <h5 class="card-title">Despesas</h5>
+                <p class="card-text">
+                  Vizualização das despesas cadastradas.
+                </p>
+                <a href="/despesa" class="btn btn-primary">Vizualizar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    
+    <%- include ('../partials/footer') %>
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+</html>

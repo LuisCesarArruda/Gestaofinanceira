@@ -1,0 +1,55 @@
+<div class="row mb-3 container">
+  <div class="col">
+    <label for="inputName" class="form-label">Nome</label>
+    <% if(user){ %>
+    <input type="text" class="form-control" id="inputName" name="name" value="<%= user.name%>" />
+
+    <% }else { %>
+    <input type="text" class="form-control" id="inputName" name="name" />
+
+    <% } %>
+    <div class="row mb-3">
+
+      <div class="col">
+        <label for="inputEmail" class="form-label">Selecione a Operação</label>
+
+        <select class="form-select" aria-label="Default select example" name="tipoValor">
+          <option value="d">Despesa</option>
+          <option value="r">Receita</option>
+          
+        </select>
+
+
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label for="inputPassword" class="form-label">Valor</label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">R$</span>
+          </div>
+
+          <% if(user) {%>
+
+          <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name="valor" value="<%=user.valor%>">
+
+          <% }else{%>
+
+          <input type="number" class="form-control" name = "valor" aria-label="Amount (to the nearest dollar)">
+
+          <% }%>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+<% if(user){%>
+<input type="hidden" name="id" value="<%= user.id%>">
+<% } %>
+
+<button type="submit" class="btn btn-primary">Salvar</button>
